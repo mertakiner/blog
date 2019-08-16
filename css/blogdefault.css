@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100i');
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    margin: 0;
+    background: white;
+    /* height: auto; */
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    /* text-transform: uppercase; */
+    font-style: inherit;
+    margin: 0;
+}
+
+#headerWrapper {
+    font-family: 'Dancing Script', cursive;
+    line-height: 1.5em;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 50px;
+    text-align: center;
+}
+
+#pageWrapper {
+    font-family: 'Roboto Mono', monospace;    
+    line-height: 2em;
+    letter-spacing: 0.8px;
+    font-weight: 300;
+    font-style: normal;
+    padding: 1em;
+    text-align: center;
+}
+
+#footerWrapper {
+    text-align: center;
+}
+
+h3, h4 {
+  color: #FF7163;
+  font-style: inherit;
+  text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(4, 32vw);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+.box {
+    height: 100%;
+    transition: transform 0.5s;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .box:hover {
+    opacity: 0.2;
+  }
+  
+  .box.open {
+    font-size: 50px;
+  }
+ 
+@media (max-width: 468px) {
+    .container {
+      display: grid;
+      grid-template-rows: repeat(12, 90vw);
+      grid-template-columns: repeat(1, 1fr);
+      height: auto;
+      width: 100%;
+    }
+    .container div {
+      border: 1px #ccc solid;
+      padding: 92px;
+    }
+    .box {
+      transition: 0.2s;
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      background-size: cover;
+      cursor: pointer;
+    }
+  
+    .box:hover {
+      opacity: 0.5;
+    }
+  }
